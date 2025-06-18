@@ -14,13 +14,13 @@ Java Development Kit (JDK 11 or later)
 Internet connection (for Gradle dependencies)
 
 ### 🛠️ Setup Instructions
-1. Download the Project
+#### 1. Download the Project
 
 Click the green Code button on GitHub and select Download ZIP
 
 Extract the ZIP file to your preferred folder
 
-2. Open the Project in IntelliJ
+#### 2. Open the Project in IntelliJ
 
 Open IntelliJ IDEA
 
@@ -28,13 +28,13 @@ Select Open and choose the top-level build.gradle file in the project root
 
 IntelliJ will import the Gradle project (may take a moment)
 
-3. Build the Project
+#### 3. Build the Project
 
 Open the Terminal inside IntelliJ (bottom panel)
 
 Run the following command:./gradlew clean build
 
-4. Run the Game
+#### 4. Run the Game
 
 Open the Gradle tab (usually on the right side of IntelliJ)
 
