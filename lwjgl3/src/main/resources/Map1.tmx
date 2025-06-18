@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="128" tileheight="128" infinite="0" nextlayerid="3" nextobjectid="12">
+ <tileset firstgid="1" source="Terrain.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt2ssOwiAQQFGo+v+/7NaYgkHRGfAszqKLkpQb+j5KKQcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADbuU0UfSyrmzmPmsybx8fty6DaGYvPe9TB/fXQY1dn53w9Ynv05lePvD1613Q9ftujdjpZHzE9WmPooceu9MhFj1zO5q/1TsT9VUyP0eePV+Ohx6r0yGW0x/WJHnrsTI9c9Mij9b373eu57+f5ekQf0+pm9bA28vTQIr6H/+C+18O/iAAAAMC/uAO4ok9W
+  </data>
+ </layer>
+ <objectgroup id="2" name="Borders">
+  <object id="2" x="1184" y="8720" width="64" height="2760"/>
+  <object id="3" x="1288" y="8096" width="112" height="744"/>
+  <object id="4" x="1412" y="8064" width="2288" height="120"/>
+  <object id="5" x="3596" y="8198" width="234" height="112"/>
+  <object id="6" x="3716" y="8324" width="116" height="2548"/>
+  <object id="7" x="3584.85" y="10757.6" width="118.182" height="372.727"/>
+  <object id="8" x="3469.7" y="11015.2" width="103.03" height="242.424"/>
+  <object id="9" x="3327.27" y="11145.5" width="130.303" height="239.394"/>
+  <object id="10" x="2957.58" y="11272.7" width="357.576" height="109.091"/>
+  <object id="11" x="1260" y="11412" width="1784" height="80"/>
+ </objectgroup>
+</map>
