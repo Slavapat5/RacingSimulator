@@ -4,6 +4,15 @@ A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://git
 
 This project was generated with a template including simple application launchers and a main class extending `Game` that sets the first screen.
 
+## 🏁 How to Run the Game
+
+### ✅ Prerequisites
+IntelliJ IDEA (Community or Ultimate Edition)
+
+Java Development Kit (JDK 11 or later)
+
+Internet connection (for Gradle dependencies)
+
 ## Platforms
 
 - `core`: Main module with the application logic shared by all platforms.
