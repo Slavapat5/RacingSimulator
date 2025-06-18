@@ -13,6 +13,21 @@ Java Development Kit (JDK 11 or later)
 
 Internet connection (for Gradle dependencies)
 
+### 🛠️ Setup Instructions
+Download the Project
+
+Click the green Code button on GitHub and select Download ZIP
+
+Extract the ZIP file to your preferred folder
+
+Open the Project in IntelliJ
+
+Open IntelliJ IDEA
+
+Select Open and choose the top-level build.gradle file in the project root
+
+IntelliJ will import the Gradle project (may take a moment)
+
 ## Platforms
 
 - `core`: Main module with the application logic shared by all platforms.
