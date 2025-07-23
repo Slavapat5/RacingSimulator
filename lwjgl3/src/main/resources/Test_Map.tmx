@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="128" tileheight="128" infinite="1" nextlayerid="5" nextobjectid="7">
+ <tileset firstgid="1" name="Terrain" tilewidth="128" tileheight="128" tilecount="5" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="Road_Basic.png" width="128" height="128"/>
+  </tile>
+  <tile id="1">
+   <image source="Grass_Basic.png" width="128" height="128"/>
+  </tile>
+  <tile id="2">
+   <image source="Road_Basic2.png" width="128" height="128"/>
+  </tile>
+  <tile id="3">
+   <image source="Sand.png" width="128" height="128"/>
+  </tile>
+  <tile id="4">
+   <image source="Barrier.png" width="128" height="128"/>
+  </tile>
+ </tileset>
+ <layer id="1" name="Terrain" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="-16" width="16" height="16">
+   eJxjYBgFo2DwASYi8ah+yvQDAFlQAHk=
+  </chunk>
+   <chunk x="0" y="-16" width="16" height="16">
+   eJxjYBgFo2DgABMReFQ/7fQDAFvAAG0=
+  </chunk>
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYMAOmIjEuMBI1z8KRsFQAABRpwBl
+  </chunk>
+   <chunk x="0" y="0" width="16" height="16">
+   eJxjYmBgYCKA8QFCeoe7/lEwCoYyAAA5bwBb
+  </chunk>
+  </data>
+ </layer>
+ <layer id="3" name="Roads" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="-16" width="16" height="16">
+   eJxjYBgFo2DoAUYi1TETwOTaQ6z9A6Uf5j9GBvz+BwAkxAA8
+  </chunk>
+   <chunk x="0" y="-16" width="16" height="16">
+   eJxjYBgFo2DoAmY8mJFCs4eCfnx+Z4Sy8QEAJMwAMQ==
+  </chunk>
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYMAPGIGYGYrRxYkBTFCMrp5Y/TDAjAOTC0i1n9r6R8EoGAwAAHmoACM=
+  </chunk>
+   <chunk x="0" y="0" width="16" height="16">
+   eJxjYMAOGHGIEwuI1c+MB4+CUTAKaAsAVBQAGA==
+  </chunk>
+  </data>
+ </layer>
+ <layer id="4" name="Barriers" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="-16" width="16" height="16">
+   eJxjYBgFo4C6gJUEjEs/pfaP6icOAABzkABW
+  </chunk>
+   <chunk x="0" y="-16" width="16" height="16">
+   eJxjYBgFo4B8wEoCptSOUf3U1w8Ai4wAdA==
+  </chunk>
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYMAErFjESAGj+onHo2AUDCQAAOg0AFE=
+  </chunk>
+   <chunk x="0" y="0" width="16" height="16">
+   eJxjYCAMWKGYXDCc9bOSgEfBKBhsAAA+lwBq
+  </chunk>
+  </data>
+ </layer>
+ <objectgroup id="2" name="Border">
+  <object id="1" x="-1278.79" y="-854.545" width="2436.36" height="87.8788"/>
+  <object id="3" x="1154.55" y="-769.697" width="124.242" height="1396.97"/>
+  <object id="4" x="-1275.76" y="642.424" width="2554.55" height="121.212"/>
+  <object id="5" x="-1412.12" y="-845.455" width="124.242" height="1609.09"/>
+ </objectgroup>
+</map>

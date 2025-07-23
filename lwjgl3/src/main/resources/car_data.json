@@ -1,0 +1,122 @@
+[
+  {
+    "image": "Ferrari F40 - 1987.png",
+    "title": "1987 Ferrari F40",
+    "description": "A legendary supercar from the 80s",
+    "price": 3000000,
+    "horsepower": 478,
+    "weightKg": 1100,
+    "engine": "V8, 2.9L Twin Turbo",
+    "longDescription": "The Ferrari F40 was built to celebrate Ferrari’s 40th anniversary. It was the last car personally approved by Enzo Ferrari and became iconic for its raw driving experience, lightweight construction, and stunning performance. With its twin-turbocharged V8 and aggressive styling, it remains one of the most revered supercars in history."
+  },
+  {
+    "image": "Lamborghini Aventador - 2020.png",
+    "title": "2020 Lamborghini Aventador",
+    "description": "Jet-inspired track car",
+    "price": 425000,
+    "horsepower": 759,
+    "weightKg": 1575,
+    "engine": "V12, 6.5L",
+    "longDescription": "The Aventador marked the end of an era for naturally aspirated V12 Lamborghinis. With jet-fighter-inspired styling and scissor doors, it delivered explosive power and aggressive dynamics. It served as Lamborghini’s flagship until the brand shifted to hybrid successors in the 2020s."
+  },
+  {
+    "image": "Audi A4 - 2020.png",
+    "title": "2020 Audi A4",
+    "description": "A comfortable, high-performance sedan",
+    "price": 30000,
+    "horsepower": 188,
+    "weightKg": 1530,
+    "engine": "I4, 2.0L Turbo",
+    "longDescription": "The 2020 Audi A4 is a refined compact luxury sedan that blends premium materials, advanced tech, and sharp German engineering. With a turbocharged engine and quattro all-wheel drive available, it balances daily comfort with confident driving dynamics."
+  },
+  {
+    "image": "Lamborghini Huracan - 2010.png",
+    "title": "2014 Lamborghini Huracan",
+    "description": "The successor of the famous Gallardo",
+    "price": 230000,
+    "horsepower": 602,
+    "weightKg": 1422,
+    "engine": "V10, 5.2L",
+    "longDescription": "Replacing the Gallardo, the Huracan brought a more modern, refined edge to Lamborghini's V10 lineup. With sharp styling, lightning-quick acceleration, and advanced all-wheel drive systems, it became one of Lamborghini’s best-selling models."
+  },
+  {
+    "image": "Mercedes-Benz G-Class C63 AMG - 2020.png",
+    "title": "2020 Mercedes G-Wagon",
+    "description": "Luxury off-roader with powerful performance and iconic design.",
+    "price": 160000,
+    "horsepower": 577,
+    "weightKg": 2560,
+    "engine": "V8, 4.0L Twin Turbo",
+    "longDescription": "Originally designed for military use, the G-Class evolved into a luxury icon. The 2020 AMG variant pairs the boxy, rugged design with immense power and high-end comfort, making it a status symbol on and off the road."
+  },
+  {
+    "image": "BMW M3 G80 - 2020.png",
+    "title": "2020 BMW M3 G80",
+    "description": "High-performance sports sedan with aggressive styling and turbocharged power.",
+    "price": 70000,
+    "horsepower": 503,
+    "weightKg": 1730,
+    "engine": "I6, 3.0L Twin Turbo",
+    "longDescription": "The G80 generation of the BMW M3 introduced bold styling and even bolder performance. With a twin-turbo inline-six and available all-wheel drive for the first time in M3 history, it redefined the modern performance sedan."
+  },
+  {
+    "image": "Mercedes-Benz S600 - 2010.png",
+    "title": "2010 Mercedes S-Class S600",
+    "description": "Flagship luxury sedan with V12 performance and ultimate comfort.",
+    "price": 145000,
+    "horsepower": 510,
+    "weightKg": 2180,
+    "engine": "V12, 5.5L Twin Turbo",
+    "longDescription": "The S600 was Mercedes-Benz’s answer to uncompromising luxury and power. With a silky V12 engine and state-of-the-art comfort features, it represented the pinnacle of German engineering for business executives and luxury connoisseurs alike."
+  },
+  {
+    "image": "Ferrari F8 Tributo - 2020.png",
+    "title": "2020 Ferrari F8 Tributo",
+    "description": "Track-ready supercar with breathtaking speed and aerodynamic style.",
+    "price": 285000,
+    "horsepower": 710,
+    "weightKg": 1435,
+    "engine": "V8, 3.9L Twin Turbo",
+    "longDescription": "The F8 Tributo pays homage to Ferrari’s legendary V8 lineage. Featuring the most powerful V8 ever fitted to a non-special series Ferrari, it combines beautiful design with extraordinary track and road capabilities."
+  },
+  {
+    "image": "Bugatti EB110 - 1995.png",
+    "title": "1995 Bugatti EB110",
+    "description": "Rare AWD supercar with a quad-turbo V12 and legendary speed.",
+    "price": 1200000,
+    "horsepower": 553,
+    "weightKg": 1620,
+    "engine": "V12, 3.5L Quad Turbo",
+    "longDescription": "The Bugatti EB110 was a technical marvel of the 1990s, featuring a carbon-fiber chassis, quad-turbo V12, and all-wheel drive. Despite financial struggles, it helped resurrect the Bugatti name and laid the groundwork for the Veyron years later."
+  },
+  {
+    "image": "Ford GT - 2005.png",
+    "title": "2005 Ford GT",
+    "description": "Retro-inspired supercar reviving Ford's racing heritage.",
+    "price": 550000,
+    "horsepower": 550,
+    "weightKg": 1521,
+    "engine": "V8, 5.4L Supercharged",
+    "longDescription": "Inspired by the legendary GT40 that won Le Mans, the 2005 Ford GT was a limited-production halo car that brought retro design and modern engineering together. It featured a supercharged V8 and became a collector’s favorite."
+  },
+  {
+    "image": "Mitsubishi Lancer Evo IX - 2007.png",
+    "title": "2007 Mitsubishi Lancer Evolution IX",
+    "description": "Iconic AWD rally-bred sedan with aggressive turbo power.",
+    "price": 35000,
+    "horsepower": 286,
+    "weightKg": 1480,
+    "engine": "I4, 2.0L Turbo",
+    "longDescription": "The Evo IX refined Mitsubishi’s rally dominance for the streets. With an advanced AWD system, precise handling, and tunable turbocharged engine, it became a cult icon among car enthusiasts and motorsport fans alike."
+  },
+  {
+    "image": "Mercedes-Benz C300 - 2010.png",
+    "title": "2010 Mercedes-Benz C300",
+    "description": "Refined German luxury with balanced performance and comfort.",
+    "price": 40000,
+    "horsepower": 228,
+    "weightKg": 1600,
+    "engine": "V6, 3.0L",
+    "longDescription": "The 2010 Mercedes-Benz C300 blended executive elegance with sporty confidence. Known for its solid build quality, smooth V6 engine, and premium interior, it appealed to buyers seeking daily luxury with a touch of performance."
+  }
+]

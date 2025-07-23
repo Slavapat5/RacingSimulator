@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="160" tilewidth="128" tileheight="128" infinite="0" nextlayerid="5" nextobjectid="9">
+ <tileset firstgid="1" source="Tileset.tsx"/>
+ <tileset firstgid="33" source="Tileset_Drag.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="30" height="160">
+  <data encoding="base64" compression="zlib">
+   eJzt0TkOgDAMAMHwF8Qlzv9/jpRpIyRceIptPbI9lFKGju7aVRubztrTOac3LpfL5XK5+dy96e99t6A7c7lcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL5XK5XG6UOwW5czJ3TeZm+2+UuwS5xwf3Bc3Iy/M=
+  </data>
+ </layer>
+ <objectgroup id="2" name="Borders">
+  <object id="5" x="1629.45" y="0.363636" width="31.4545" height="20478.9"/>
+  <object id="6" x="2307.45" y="0.181818" width="32.0909" height="20479.7"/>
+  <object id="7" x="1643" y="20060" width="691" height="35"/>
+ </objectgroup>
+ <objectgroup id="3" name="Teleports"/>
+ <objectgroup id="4" name="FinishZone">
+  <object id="8" x="1637.33" y="1428" width="672" height="1016"/>
+ </objectgroup>
+</map>
