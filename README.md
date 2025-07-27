@@ -35,17 +35,17 @@ Note that most tasks that are not specific to a single project can be run with `
 For example, `core:clean` removes `build` folder only from the `core` project.
 
 
-🏁 How to Run the Game
+## 🏁 How to Run the Game
 Follow these steps to download, build, and run the 2D Racing Simulator project using IntelliJ IDEA and Gradle:
 
-✅ Prerequisites
+## ✅ Prerequisites
 IntelliJ IDEA (Community or Ultimate Edition)
 
 Java Development Kit (JDK 11 or later)
 
 Internet connection (for Gradle dependencies)
 
-🛠️ Setup Instructions
+## 🛠️ Setup Instructions
 Download the Project
 
 Click the green Code button on GitHub and select Download ZIP
