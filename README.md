@@ -33,3 +33,49 @@ Useful Gradle tasks and flags:
 
 Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
 For example, `core:clean` removes `build` folder only from the `core` project.
+
+
+🏁 How to Run the Game
+Follow these steps to download, build, and run the 2D Racing Simulator project using IntelliJ IDEA and Gradle:
+
+✅ Prerequisites
+IntelliJ IDEA (Community or Ultimate Edition)
+
+Java Development Kit (JDK 11 or later)
+
+Internet connection (for Gradle dependencies)
+
+🛠️ Setup Instructions
+Download the Project
+
+Click the green Code button on GitHub and select Download ZIP
+
+Extract the ZIP file to your preferred folder
+
+Open the Project in IntelliJ
+
+Open IntelliJ IDEA
+
+Select Open and choose the top-level build.gradle file in the project root
+
+IntelliJ will import the Gradle project (may take a moment)
+
+Build the Project
+
+Open the Terminal inside IntelliJ (bottom panel)
+
+Run the following command: ./gradlew clean build
+
+Run the Game
+
+Open the Gradle tab (usually on the right side of IntelliJ)
+
+Navigate to:
+lwjgl3 → Tasks → application → run
+
+Double-click run to launch the game
+
+🐞 Troubleshooting
+If ./gradlew doesn’t work on Windows, use: gradlew.bat clean build
+
+
