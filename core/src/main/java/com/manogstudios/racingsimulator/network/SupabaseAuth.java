@@ -44,7 +44,7 @@ public class SupabaseAuth {
                     JSONObject json = new JSONObject(response.body());
                     accessToken = json.getString("access_token");
 
-                    // ✅ Extract and store the user ID
+                    // Extract and store user ID
                     String userId = json.getJSONObject("user").getString("id");
                     SupabaseAuth.userId = json.getJSONObject("user").getString("id");
 

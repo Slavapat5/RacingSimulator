@@ -84,14 +84,11 @@ public class DealershipScreen implements Screen {
         infoPanel.pad(20);
         infoPanel.defaults().space(15);
 
-// Instead of using `car.longDescription`, just initialize with a blank or default text
         historyLabel = new Label("Select a car to see its history.", skin);
         historyLabel.setWrap(true);
         historyLabel.setAlignment(Align.topLeft);
         historyLabel.setColor(Color.LIGHT_GRAY);
 
-
-// Labels
         selectedCarLabel = new Label("Select a car", skin);
         selectedCarLabel.setFontScale(1.5f);
         selectedCarLabel.setAlignment(Align.center);
@@ -109,7 +106,7 @@ public class DealershipScreen implements Screen {
         carPreviewImage.setSize(300, 150); // Adjust as needed
 
 
-// Content table
+        // Content table
         Table infoContent = new Table();
         infoContent.add(carPreviewImage).size(300, 150).row();
         infoContent.add(selectedCarLabel).center().row();
@@ -126,7 +123,7 @@ public class DealershipScreen implements Screen {
 
 
 
-// Add the scrollPane and infoPanel to the root
+        // Add the scrollPane and infoPanel to the root
         root.add(scrollPane).expand().fill().left();
         root.add(infoPanel).width(400).expandY().fillY().padRight(10); // Side box on the right
 
@@ -135,7 +132,7 @@ public class DealershipScreen implements Screen {
         cashLabel.setFontScale(1.2f);
         cashLabel.setAlignment(Align.center);
 
-// Apply the custom background
+        // Apply the custom background
         Container<Label> cashContainer = new Container<>(cashLabel);
         cashContainer.setBackground(createCashLabelBackground());
         cashContainer.setColor(Color.BLACK);
@@ -154,7 +151,7 @@ public class DealershipScreen implements Screen {
                 game.setScreen(new MenuScreen(game));
             }
         });
-        topBar.add(backButton).expandX().right(); // Pushes it to the right side
+        topBar.add(backButton).expandX().right();
 
 
         stage.addActor(topBar);
@@ -181,7 +178,7 @@ public class DealershipScreen implements Screen {
                 horsepowerLabel.setText("Power: " + car.horsepower + " hp");
                 weightLabel.setText("Weight: " + car.weightKg + " kg");
                 engineLabel.setText("Engine: " + car.engine);
-                historyLabel.setText(car.longDescription); // ← update the history here
+                historyLabel.setText(car.longDescription);
 
 
 
@@ -214,7 +211,7 @@ public class DealershipScreen implements Screen {
         String formattedPrice = String.format("%,d", car.price);
         Label priceLabel = new Label("$" + formattedPrice, skin);
         priceLabel.setColor(Color.GREEN);
-        priceLabel.setFontScale(1.2f); // Slightly larger
+        priceLabel.setFontScale(1.2f);
         priceLabel.setAlignment(Align.center);
         carBox.add(priceLabel).row();
 

@@ -18,7 +18,7 @@ public class CarOwnershipManager {
             ownedCars.addAll(Arrays.asList(lines));
         } else {
             // Add default car if file doesn't exist
-            ownedCars.add("Ferrari F40 - 1987.png");
+            ownedCars.add("Audi A4 - 2020.png");
             saveOwnedCars();
         }
     }

@@ -80,13 +80,13 @@ public class DragRaceScreen implements Screen {
 
         // Container Table for the UI
         Table uiTable = new Table();
-        uiTable.top().right();  // Position at top right
+        uiTable.top().right();
         uiTable.setFillParent(true);
 
-        // Create a full-screen start overlay
+
         startOverlay = new Table();
         startOverlay.setFillParent(true);
-        startOverlay.center(); // Center content in the table
+        startOverlay.center();
 
         TextButton startButton = new TextButton("Start Race", skin);
 
@@ -100,17 +100,17 @@ public class DragRaceScreen implements Screen {
         startButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                startOverlay.remove(); // Hide the overlay
+                startOverlay.remove();
                 countdownActive = true;
                 countdownStartTime = TimeUtils.millis();
             }
         });
 
         startOverlay.add(startButton).width(300).height(80);
-        uiStage.addActor(startOverlay); // Add overlay last so it's on top
+        uiStage.addActor(startOverlay);
 
         countdownLabel = new Label("", skin);
-        countdownLabel.setFontScale(4f); // Make it big
+        countdownLabel.setFontScale(4f);
         countdownLabel.setVisible(false);
 
         Table countdownTable = new Table();
@@ -122,14 +122,14 @@ public class DragRaceScreen implements Screen {
 
 
 // Main toggle button
-        TextButton toggleButton = new TextButton("Menu", skin);  // Hamburger icon style
+        TextButton toggleButton = new TextButton("Menu", skin);
         uiTable.add(toggleButton).pad(10).width(60);
 
-// Menu table (initially hidden)
+// Menu table
         final Table menuTable = new Table(skin);
         menuTable.setVisible(false);  // Start hidden
         menuTable.defaults().pad(5).fillX().uniformX();
-        menuTable.background("default-round");  // Optional style
+        menuTable.background("default-round");
 
 // Buttons in the dropdown
         TextButton option1 = new TextButton("Switch Car", skin);
@@ -170,7 +170,7 @@ public class DragRaceScreen implements Screen {
             }
         });
 
-// Add both toggle button and menu to UI stage
+
         uiTable.row();
         uiTable.add(menuTable).padTop(5);
 
@@ -227,8 +227,8 @@ public class DragRaceScreen implements Screen {
         CarStats stats = CarRegistry.getStats(selectedCarTexture);
         cars.add(new Car(selectedCarTexture, carStartX, carStartY, stats.acceleration, stats.speed, stats.handling));
 
-        CarStats aiStats = new CarStats(2130f, 276f, 3f);
-        cars.add(new Car("Bugatti EB110 - 1995.png", carStartX + 380, carStartY, aiStats.acceleration, aiStats.speed, aiStats.handling));
+        CarStats aiStats = new CarStats(1550f, 94f, 2f);
+        cars.add(new Car("Audi A4 - 2020.png", carStartX + 380, carStartY, aiStats.acceleration, aiStats.speed, aiStats.handling));
 
 
 
@@ -246,7 +246,7 @@ public class DragRaceScreen implements Screen {
         Label rewardLabel = new Label("+$10,000", skin);
         rewardLabel.setFontScale(3.5f);
         rewardLabel.setAlignment(Align.center);
-        rewardLabel.setColor(Color.GREEN); //  Set text color to green
+        rewardLabel.setColor(Color.GREEN);
 
         Label timeLabel = new Label(String.format("Time: %.2f seconds", timeMillis / 1000f), skin);
         timeLabel.setFontScale(4f);
@@ -277,15 +277,13 @@ public class DragRaceScreen implements Screen {
         summaryTable.add(resultLabel).padBottom(30).row();
 
 
-        //  Reward label in green
-
 
         TextButton retryButton = new TextButton("Retry", skin);
         retryButton.getLabel().setFontScale(2f);
         retryButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                summaryTable.remove(); // Hide summary
+                summaryTable.remove();
                 raceFinished = false;
                 raceStarted = false;
                 countdownActive = false;
@@ -294,7 +292,7 @@ public class DragRaceScreen implements Screen {
                 cars.get(0).setPosition(carStartX, carStartY);
                 cars.get(1).setPosition(carStartX + 380, carStartY); // Or whatever offset you use for AI
 
-                uiStage.addActor(startOverlay); // Show the "Start Race" button again
+                uiStage.addActor(startOverlay);
             }
         });
 
@@ -303,11 +301,10 @@ public class DragRaceScreen implements Screen {
         returnButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                game.setScreen(new GameScreen(game)); // Or another screen
+                game.setScreen(new GameScreen(game));
             }
         });
 
-        //  Add reward + time + buttons to the table
 
         summaryTable.add(retryButton).width(300).height(80).padBottom(20).row();
         summaryTable.add(returnButton).width(300).height(80);
@@ -373,7 +370,7 @@ public class DragRaceScreen implements Screen {
             borderRectangles
         );
 
-        // AI car always accelerates forward
+
 // Only update AI if race is not finished
         if (!raceFinished) {
             cars.get(1).update(delta, true, false, false, false, borderRectangles);
@@ -395,7 +392,6 @@ public class DragRaceScreen implements Screen {
                 raceFinished = true;
 
                 if (playerFinished && aiFinished) {
-                    // In case both overlap in same frame, check who is further past the finish line
                     if (playerCar.getX() > aiCar.getX()) {
                         winner = "You Won!";
                         CashManager.addCash(10000);
@@ -407,6 +403,7 @@ public class DragRaceScreen implements Screen {
                     CashManager.addCash(10000);
                 } else {
                     winner = "AI Won!";
+                    CashManager.addCash(5000);
                 }
 
                 showFinishDialog(raceEndTime, playerFinished);

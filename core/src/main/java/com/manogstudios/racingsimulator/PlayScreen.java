@@ -28,7 +28,7 @@ public class PlayScreen implements Screen {
     private Texture backgroundTexture;
 
     public PlayScreen(Game game) {
-        this.game = game; // Initialize the game reference
+        this.game = game;
         System.out.println("PlayScreen constructor called!");
     }
 
@@ -44,7 +44,7 @@ public class PlayScreen implements Screen {
         batch = new SpriteBatch();
         stage = new Stage(new ScreenViewport());
 
-        backgroundTexture = new Texture(Gdx.files.internal("PlayScreen3.png")); // Background of Play Screen
+        backgroundTexture = new Texture(Gdx.files.internal("PlayScreen3.png"));
 
         TextButton.TextButtonStyle buttonStyle = new TextButton.TextButtonStyle();
         buttonStyle.font = new BitmapFont();

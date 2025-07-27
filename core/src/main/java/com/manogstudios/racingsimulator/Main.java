@@ -14,7 +14,7 @@ public class Main extends Game {
         CashManager.loadCash();
 
         if (SupabaseAuth.isLoggedIn) {
-            this.setScreen(new MenuScreen(this));  // or PlayScreen
+            this.setScreen(new MenuScreen(this));
         } else {
             this.setScreen(new LoginScreen(this));
         }

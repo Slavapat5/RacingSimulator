@@ -68,9 +68,9 @@ public class RegisterScreen implements Screen {
                     boolean success = SupabaseAuth.registerUser(email, password); // no username
                     Gdx.app.postRunnable(() -> {
                         if (success) {
-                            statusLabel.setText("✅ Registration successful!");
+                            statusLabel.setText("Registration successful!");
                         } else {
-                            statusLabel.setText("❌ Failed to register.");
+                            statusLabel.setText("Failed to register.");
                         }
                     });
                 }).start();

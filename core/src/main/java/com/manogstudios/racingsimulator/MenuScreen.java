@@ -194,10 +194,12 @@ public class MenuScreen implements Screen {
         final TextButton logoutButton = new TextButton("Log out", skin);
         final TextButton exitButton = new TextButton("Exit", skin);
         final TextButton quitButton = new TextButton("Quit Game", skin);
+        final TextButton resetButton = new TextButton("Reset Stats", skin);
 
         logoutButton.setVisible(false);
         exitButton.setVisible(false);
         quitButton.setVisible(false);
+        resetButton.setVisible(false);
 
         // Floating buttons table
         Table popupTable = new Table();
@@ -206,6 +208,7 @@ public class MenuScreen implements Screen {
         popupTable.add(logoutButton).size(120, 40).row();
         popupTable.add(exitButton).size(120, 40).row();
         popupTable.add(quitButton).size(120, 40);
+        popupTable.add(resetButton).size(120, 40);
         stage.addActor(popupTable);
 
         quitButton.addListener(new ClickListener() {
@@ -243,18 +246,34 @@ public class MenuScreen implements Screen {
                 logoutButton.setVisible(visible);
                 exitButton.setVisible(visible);
                 quitButton.setVisible(visible);
+                resetButton.setVisible(visible);
             }
         });
 
         exitButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                //CashManager.addCash(10000); // Give 10,000 cash
-                //System.out.println("Added $10,000 cash. Total now: $" + CashManager.getCash());
                 game.setScreen(new PlayScreen(game));
             }
         });
 
+        resetButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                Dialog confirmDialog = new Dialog("Confirm Reset", skin) {
+                    protected void result(Object object) {
+                        if ((Boolean) object) {
+
+                            CashManager.setCash(80000);
+                        }
+                    }
+                };
+                confirmDialog.text("Are you sure you want to reset your cash?");
+                confirmDialog.button("Yes", true);
+                confirmDialog.button("No", false);
+                confirmDialog.show(stage);
+            }
+        });
 
 
 
@@ -269,10 +288,10 @@ public class MenuScreen implements Screen {
         int height = 50;
 
         Pixmap pixmap = new Pixmap(width, height, Pixmap.Format.RGBA8888);
-        pixmap.setColor(Color.LIGHT_GRAY); // Fill color
+        pixmap.setColor(Color.LIGHT_GRAY);
         pixmap.fill();
 
-        pixmap.setColor(Color.BLACK); // Border color
+        pixmap.setColor(Color.BLACK);
         pixmap.drawRectangle(0, 0, width, height);
 
         Texture texture = new Texture(pixmap);

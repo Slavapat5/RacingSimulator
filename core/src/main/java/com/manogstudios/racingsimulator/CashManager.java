@@ -5,7 +5,7 @@ import com.badlogic.gdx.files.FileHandle;
 
 public class CashManager {
     private static final String FILE_PATH = "cash.txt";
-    private static int cash = 1000000; // default starting cash
+    private static int cash = 80000; // default starting cash
     public static boolean enableSaving = true;
 
     public static void loadCash() {
@@ -15,7 +15,7 @@ public class CashManager {
                 cash = Integer.parseInt(file.readString().trim());
             } catch (NumberFormatException e) {
                 e.printStackTrace();
-                cash = 100000; // fallback
+                cash = 50000; // fallback
             }
         } else {
             saveCash(); // create file if not exists

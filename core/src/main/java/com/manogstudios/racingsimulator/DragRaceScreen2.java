@@ -83,10 +83,10 @@ public class DragRaceScreen2 implements Screen {
         uiTable.top().right();  // Position at top right
         uiTable.setFillParent(true);
 
-        // Create a full-screen start overlay
+
         startOverlay = new Table();
         startOverlay.setFillParent(true);
-        startOverlay.center(); // Center content in the table
+        startOverlay.center();
 
         TextButton startButton = new TextButton("Start Race", skin);
 
@@ -100,17 +100,17 @@ public class DragRaceScreen2 implements Screen {
         startButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                startOverlay.remove(); // Hide the overlay
+                startOverlay.remove();
                 countdownActive = true;
                 countdownStartTime = TimeUtils.millis();
             }
         });
 
         startOverlay.add(startButton).width(300).height(80);
-        uiStage.addActor(startOverlay); // Add overlay last so it's on top
+        uiStage.addActor(startOverlay);
 
         countdownLabel = new Label("", skin);
-        countdownLabel.setFontScale(4f); // Make it big
+        countdownLabel.setFontScale(4f);
         countdownLabel.setVisible(false);
 
         Table countdownTable = new Table();
@@ -122,10 +122,10 @@ public class DragRaceScreen2 implements Screen {
 
 
 // Main toggle button
-        TextButton toggleButton = new TextButton("Menu", skin);  // Hamburger icon style
+        TextButton toggleButton = new TextButton("Menu", skin);
         uiTable.add(toggleButton).pad(10).width(60);
 
-// Menu table (initially hidden)
+// Menu table
         final Table menuTable = new Table(skin);
         menuTable.setVisible(false);  // Start hidden
         menuTable.defaults().pad(5).fillX().uniformX();
@@ -170,7 +170,7 @@ public class DragRaceScreen2 implements Screen {
             }
         });
 
-// Add both toggle button and menu to UI stage
+
         uiTable.row();
         uiTable.add(menuTable).padTop(5);
 
@@ -362,7 +362,7 @@ public class DragRaceScreen2 implements Screen {
             if (playerFinished) {
                 long raceEndTime = TimeUtils.timeSinceMillis(raceStartTime);
                 raceFinished = true;
-                CashManager.addCash(10000);
+                CashManager.addCash(4000);
                 showFinishDialog(raceEndTime);
             }
         }
@@ -382,7 +382,7 @@ public class DragRaceScreen2 implements Screen {
                 if (accepted) {
                     // TODO: Load another screen or map here
                     System.out.println("Player accepted travel.");
-                    game.setScreen(new DragRaceScreen(game)); // Replace with target screen
+                    game.setScreen(new DragRaceScreen(game));
                 } else {
                     System.out.println("Player declined travel.");
                 }

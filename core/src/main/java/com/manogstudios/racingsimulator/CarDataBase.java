@@ -31,7 +31,7 @@ public class CarDataBase {
         return null;
     }
 
-    // test stuff
+    // Tests
     public static void clear() {
         cars.clear();
     }

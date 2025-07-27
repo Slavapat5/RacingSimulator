@@ -40,18 +40,18 @@ public class GarageScreen implements Screen {
         stage = new Stage(new ScreenViewport());
         Gdx.input.setInputProcessor(stage);
 
-        skin = new Skin(Gdx.files.internal("uiskin.json")); // Make sure you have this!
+        skin = new Skin(Gdx.files.internal("uiskin.json"));
 
-        // === INFO PANEL ===
+        // Info Panel
         infoPanel = new Table(skin);
         infoPanel.setBackground("default-round");
         infoPanel.setColor(0.1f, 0.1f, 0.1f, 0.9f);
         infoPanel.pad(20);
         infoPanel.defaults().space(10);
 
-        carPreviewImage = new Image(); // Empty at first
+        carPreviewImage = new Image();
         carPreviewImage.setScaling(Scaling.fit);
-        carPreviewImage.setSize(300, 150); // Adjust as needed
+        carPreviewImage.setSize(300, 150);
 
 
 
@@ -106,7 +106,7 @@ public class GarageScreen implements Screen {
 
         scrollPane = new ScrollPane(carListTable, skin);
         scrollPane.setFadeScrollBars(false);
-        scrollPane.setScrollingDisabled(true, false); // vertical scrolling only
+        scrollPane.setScrollingDisabled(true, false);
 
         root.add(scrollPane).expand().fill();
         root.add(infoPanel).width(400).expandY().fillY().padRight(10);  // Adjust width/padding if needed
@@ -118,8 +118,8 @@ public class GarageScreen implements Screen {
 
     private void addCarTemplate(Table parent, String imagePath, String title, String description) {
         Table carBox = new Table(skin);
-        carBox.setBackground("default-round"); // Optional, needs to be defined in skin
-        carBox.setColor(0.1f, 0.1f, 0.1f, 0.85f); // Dark gray with slight transparency
+        carBox.setBackground("default-round");
+        carBox.setColor(0.1f, 0.1f, 0.1f, 0.85f);
         carBox.pad(10).defaults().space(10);
 
         // Car image
@@ -272,7 +272,7 @@ public class GarageScreen implements Screen {
                 game.setScreen(new MenuScreen(game));
             }
         });
-        topBar.add(backButton).expandX().right(); // Pushes it to the right side
+        topBar.add(backButton).expandX().right();
 
 
         stage.addActor(topBar);
@@ -289,10 +289,10 @@ public class GarageScreen implements Screen {
         int height = 50;
 
         Pixmap pixmap = new Pixmap(width, height, Pixmap.Format.RGBA8888);
-        pixmap.setColor(Color.LIGHT_GRAY); // Fill color
+        pixmap.setColor(Color.LIGHT_GRAY);
         pixmap.fill();
 
-        pixmap.setColor(Color.BLACK); // Border color
+        pixmap.setColor(Color.BLACK);
         pixmap.drawRectangle(0, 0, width, height);
 
         Texture texture = new Texture(pixmap);

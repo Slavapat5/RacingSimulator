@@ -64,25 +64,24 @@ public class GameScreen implements Screen {
 
         // Container Table for the UI
         Table uiTable = new Table();
-        uiTable.top().right();  // Position at top right
+        uiTable.top().right();
         uiTable.setFillParent(true);
 
 // Main toggle button
-        TextButton toggleButton = new TextButton("Menu", skin);  // Hamburger icon style
+        TextButton toggleButton = new TextButton("Menu", skin);
         uiTable.add(toggleButton).pad(10).width(60);
 
 // Menu table (initially hidden)
         final Table menuTable = new Table(skin);
-        menuTable.setVisible(false);  // Start hidden
+        menuTable.setVisible(false);
         menuTable.defaults().pad(5).fillX().uniformX();
-        menuTable.background("default-round");  // Optional style
+        menuTable.background("default-round");
 
 // Buttons in the dropdown
         TextButton option1 = new TextButton("Switch Car", skin);
         TextButton option2 = new TextButton("Home", skin);
         TextButton option3 = new TextButton("Quit", skin);
 
-// Add buttons to the menu
         menuTable.add(option1).row();
         menuTable.add(option2).row();
         menuTable.add(option3).row();
@@ -154,7 +153,7 @@ public class GameScreen implements Screen {
             throw new RuntimeException("ERROR: Borders layer not found!");
         }
 
-        triggerZones = new ArrayList<>(); // ✅ Always initialize!
+        triggerZones = new ArrayList<>();
 
         MapLayer triggerLayer = map.getLayers().get("Teleports");
         if (triggerLayer != null) {
@@ -176,7 +175,7 @@ public class GameScreen implements Screen {
 
         String selectedCarTexture = CarSelectionData.getSelectedCarTexture();
         CarStats stats = CarRegistry.getStats(selectedCarTexture);
-        cars.add(new Car(selectedCarTexture, 6910, 10240, stats.acceleration, stats.speed, stats.handling));
+        cars.add(new Car(selectedCarTexture, 9900, 9240, stats.acceleration, stats.speed, stats.handling));
 
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 1920, 1080);
@@ -239,9 +238,9 @@ public class GameScreen implements Screen {
             @Override
             protected void result(Object obj) {
                 if (obj.equals("solo")) {
-                    game.setScreen(new DragRaceScreen2(game)); // new screen with no AI
+                    game.setScreen(new DragRaceScreen2(game));
                 } else if (obj.equals("multi")) {
-                    game.setScreen(new DragRaceScreen(game));  // existing drag race with AI
+                    game.setScreen(new DragRaceScreen(game));
                 } else {
                     // Cancelled
                 }
@@ -250,7 +249,7 @@ public class GameScreen implements Screen {
         dialog.text("Choose race type:");
         dialog.button("Race Solo", "solo");
         dialog.button("Race Opponent", "multi");
-        dialog.button("Exist", "cancel");
+        dialog.button("Exit", "cancel");
         dialog.show(uiStage);
     }
 
